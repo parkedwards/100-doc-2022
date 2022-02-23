@@ -1,4 +1,4 @@
-name: Update Changelog On Pull Request 
+name: Update Changelog On Pull Request
 
 on:
   pull_request:
@@ -10,3 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: "auto-commit PR description to changelog"
+        run: ./update-changelog.sh
+
