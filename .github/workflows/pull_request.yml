@@ -1,0 +1,12 @@
+name: Update Changelog On Pull Request 
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  mark_changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
