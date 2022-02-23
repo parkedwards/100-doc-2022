@@ -12,5 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: "auto-commit PR description to changelog"
+        env:
+          PR_DESCRIPTION: ${{ github.event.pull_request.body }}
         run: chmod +x ./update-changelog.sh && ./update-changelog.sh
 
