@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: "auto-commit PR description to changelog"
-        run: chmod -x ./update-changelog.sh && ./update-changelog.sh
+        run: chmod +x ./update-changelog.sh && ./update-changelog.sh
 
